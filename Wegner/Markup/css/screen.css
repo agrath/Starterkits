@@ -1,0 +1,692 @@
+/* _______________________________________
+
+Author: Mark Boulton Design
+Version: 1.0
+Web site: http://markboultondesign.com
+Twitter: http://twitter.com/markboultondsg
+
+_______________________________________ */ 
+
+body { 
+width : 100%;
+color: #333333;
+font-weight: normal;
+background: rgba(204, 204, 0, 0.3);
+}
+
+/*logo ________________________________________________________________________________________________________________ */
+/*positioning for iPhone*/
+h1, 
+h1 a {
+background: url("../images/logo.jpg") no-repeat scroll transparent;
+background-position: center;
+display: block;
+min-height: 58px;
+text-indent: -9999em;
+width: 100%;
+float: left;
+}
+
+/*headings/p __________________________________________________________________________________________________________ */
+
+h2, 
+h2.entry-title a { 
+font-size : 2.4em;
+font-weight: lighter;
+margin-bottom: 10px;
+}
+
+h3 { 
+font-size : 1.1em;
+line-height : 1.3; 
+font-weight: lighter;
+margin: 10px 0;
+}
+
+h4, 
+section#news h4 a, 
+section#blog h4 a { 
+margin-bottom : 10px;
+font-size : 1em;
+line-height : 1.25; 
+color: #333333;
+font-weight: lighter;
+}
+
+h5 { 
+margin-bottom: 10px;
+font-size : 1.6em;
+font-weight: lighter;
+}
+
+h6 { 
+font-size : 1em;
+}
+
+p{
+font-size: 0.9em;
+line-height: 1.6em;
+margin-bottom: 20px;
+color: #595959;
+}
+
+p.standfirst{
+font-size: 1.2em;
+line-height: 1.2em;
+margin: 20px 0 20px;
+}
+
+section#blog li{
+font-size: 0.9em;
+line-height: 1.6em;
+margin-bottom: 20px;
+color: #595959;
+}
+
+
+/*masthead __________________________________________________________________________________________________________ */
+header{
+background: rgba(204, 204, 0, 1);
+width: auto;
+}
+
+header section{
+margin : 0 auto;
+padding: 5px 0;
+width: 80%;
+max-width: 960px;
+}
+
+nav{
+display: none;
+}
+
+/*container __________________________________________________________________________________________________________ */
+#container{
+width: 80%;
+margin : 0 auto;
+padding : 24px 0;
+background : transparent; 
+max-width: 960px;
+}
+
+#content{
+background-color: white;
+border-top: 8px solid rgba(204, 204, 0, 0.3);
+}
+
+/*pre-footer __________________________________________________________________________________________________________ */
+#container footer{
+background: transparent;	
+padding: 0;
+}
+
+#container footer section{
+width: 100%;
+float: left;
+padding: 0;
+margin-bottom: 20px;
+}
+
+#container footer section h3{
+padding-bottom: 10px;
+border-bottom: 1px solid #d7d7d7;
+margin-bottom: 10px;
+}
+
+time{
+font-size: 11px;
+font-style: italic;
+color: grey;
+display: block;
+}
+
+section#about img{
+width: 100%;
+height: auto;
+border: 3px solid #eeeeee;
+}
+
+#container section a,
+aside a{
+font-size: 12px;
+color: #CCCC00;
+}
+
+aside a.active{
+font-weight: bold;
+}
+
+select#iphone_nav{
+margin-left: 65px;
+width: 126px;
+}
+
+/*image gallery __________________________________________________________________________________________________________ */
+#largeImg {
+background-color: #FFFFFF;
+border: 5px solid #EEEEEE;
+float: left;
+margin: 33px 20px 20px 0;
+height: auto;
+width: 95%;
+}
+
+/*large image thumbs*/
+ul.iphone-thumbs li {
+display: inline-block;
+margin-bottom: 10px;
+margin-right: 0;
+}
+
+ul.iphone-thumbs li img {
+background-color: #FFFFFF;
+padding: 9%;
+width:49px;
+height: auto;
+}
+
+/*large images hidden for iPhone*/
+ul.thumbs li img {
+display: none;
+}
+
+ul.iphone-thumbs li:hover, 
+ul.thumbs li:hover{
+cursor: pointer;
+}
+
+ul.iphone-thumbs li:hover, 
+ul.thumbs li:hover{
+border-bottom: 4px solid #dddddd;
+}
+
+/*images*/
+#full-image{
+height: auto;
+width:69%;
+}
+
+/*footer __________________________________________________________________________________________________________ */
+footer{
+padding: 40px 0;
+}
+
+div#footer_links{
+max-width: 960px;
+margin: auto;
+width: 80%;
+}
+
+div#footer_links section{
+padding: 0px;
+width: 100%;
+float: left;
+margin-bottom: 15px;
+}
+
+footer a{
+color: #333333;
+}
+
+footer .vcard{
+font-size: 14px;
+}
+
+footer span.org{
+font-weight: bold;
+}
+
+footer span.adr{
+display:block;
+}
+
+footer .vcard span:nth-child(4){
+display: block;
+}
+
+#footer_links p{
+font-size: 12px;
+line-height: 16px;
+color: #333333;
+margin-bottom: 5px;
+}
+
+#footer_links p#credit{
+font-size: 10px;
+}
+
+#footer_links p#credit a{
+font-weight: bold;
+color: #333333;
+}
+
+ul.footernav{
+float: left;
+font: 11px helvetica, arial, sans-serif;
+font-weight: bold;
+}
+
+ul.footernav li{
+margin-bottom: 5px;
+padding-top: 10px;
+height: 16px;
+}
+
+ul.footernav li a{
+color: #333333;
+}
+
+.footernav [role="twitter"],
+.footernav [role="facebook"],
+.footernav [role="linkedin"],
+.footernav [role="su"]{
+padding-left: 24px;
+background-repeat: no-repeat;
+background-position: 0 5px;
+}
+
+.footernav [role="twitter"]{
+background-image: url(../images/social_twitter.png);
+}
+
+.footernav [role="facebook"]{
+background-image: url(../images/social_facebook.png);
+}
+
+.footernav [role="linkedin"]{
+background-image: url(../images/social_linkedin.png);
+}
+
+.footernav [role="su"]{
+background-image: url(../images/social_su.png);
+}
+
+/*blog/news__________________________________________________________________________________________________________ */
+article#blog-article h3, article.news-article h3{
+font-size: 1.8em;
+}
+
+#container article h3 a{
+color: #333333;
+font-size: 1em;	
+}
+
+#container section#col_left_wide{
+width: 100%;
+float: left;
+margin-right: 20px;
+margin-top: 10px;
+}
+
+#container section#col_left_wide article#blog-article{
+border-bottom: 1px dotted #C5C5C5;
+}
+
+#container section#col_left_wide article{
+margin: 0 0 15px;
+}
+
+#container section#col_left_wide article:nth-child(6){
+border-bottom: none;
+}
+
+aside{
+float: left;
+width:100%;
+margin-top: 10px;
+}
+
+aside ul li{
+line-height: 16px;
+}
+
+ul.pagination li {
+background-color: #EEEEEE;
+font-size: 12px;
+padding: 5px;
+display: inline;
+}
+
+ul.pagination li.current a{
+color: #000!important;
+}
+
+.aticle-body{
+margin-top: 20px;
+}
+
+section.comment-form ol li:first-of-type {
+margin-right: 33px;
+}
+
+section.comment-form ol li {
+display: block;
+float: left;
+}
+
+input[type="text"], textarea {
+background-color: #FCFCFC;
+border: 1px solid #E5E5E5;
+color: #333333 !important;
+margin-bottom: 10px;
+padding: 5px;
+width: 211px;
+}
+
+fieldset p{
+margin-bottom: 0;
+}
+
+label {
+display: block;
+font-size: 11px;
+margin-bottom: 5px;
+text-transform: uppercase;
+}
+
+/*button styles ___________________________________________________________________________________________________*/
+input[type="submit"]{
+background-color: #333333;
+border: none;
+border-radius: 5px 5px 5px 5px;
+color: #FFFFFF;
+padding: 5px 15px;
+}
+
+input[type="submit"]:hover{
+background-color: #3e3e3e;
+cursor: pointer;
+}
+
+
+/*larger screen size media queries start (iPhone landscape/iPad and up)____________________________________________*/
+/*480px __________________________________________________________________________________________________________ */
+@media only screen and (min-width: 480px) {
+
+/*nav ____________________________________________________________________________________________________________ */
+nav{
+display: block;
+}
+
+/*masthead _______________________________________________________________________________________________________ */
+header section nav{
+margin-left: 15%;
+}
+
+header section nav ul{
+margin: 20px 0;
+}
+
+header section nav ul li{
+display: inline;
+font-size: 14px;
+}
+
+header section nav ul li a{
+-moz-border-radius: 15px; 
+-webkit-border-radius: 15px; 
+border-radius: 15px;
+
+-moz-transition: background-color 0.3s ease-out;  
+-o-transition: background-color 0.3s ease-out; 
+-webkit-transition: background-color 0.3s ease-out; 
+-ms-transition: background-color 0.3s ease-out; 
+transition: background-color 0.3s ease-out;
+          
+color: #333333;
+padding: 5px 15px;
+}
+
+header section nav ul li a.active{
+background-color: rgba(0, 0, 0, 0.1);
+color: white;
+}
+
+header section nav ul li a:hover{
+background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*footer _________________________________________________________________________________________________________ */
+#container footer section{
+width: 29%;
+float: left;
+padding: 0 20px;
+}
+
+#container footer section#news,
+footer section#contact,
+#container footer section#recent-1{
+padding-left: 0;
+}
+
+#container footer section#about,
+footer section#social,
+#container footer section#recent-3{
+padding-right: 0;
+}
+
+/*large image scaling*/
+#largeImg {
+background-color: #FFFFFF;
+float: left;
+margin: 33px 20px 33px 0;
+height: auto;
+width: 54%;
+}
+
+#container section#col_right {
+overflow: hidden;
+}
+
+/*large image thumbs*/
+ul.thumbs li {
+display: inline-block;
+margin-right: 8px;
+}
+
+ul.thumbs li img {
+display: block;
+background-color: #FFFFFF;
+border: 3px solid #EEEEEE;
+padding: 0;
+width:46px;
+height: auto;
+margin-right: 0;
+margin-bottom: 5px;
+}
+
+/*iphone images hidden*/
+ul.iphone-thumbs img {
+display: none;
+}
+
+/*iphone nav hidden*/
+select#iphone_nav{
+display: none;
+}
+
+/*forms __________________________________________________________________________________________________________ */
+input[type="text"] {
+width: 211px;
+}
+
+textarea {
+width: 470px;
+}
+
+input.subscribe {
+width: 168px;
+}
+
+/* blog __________________________________________________________________________________________________________*/
+aside{
+float: left;
+width:20%;
+margin-top: 10px;
+}
+
+/*wide left column*/
+#container section#col_left_wide{
+width: 70%;
+float: left;
+margin-right: 20px;
+margin-top: 10px;
+}
+
+/*footer___________________________________________________________________________________________________________*/
+div#footer_links section{
+width: 29%;
+}
+
+div#footer_links section{
+padding: 0 20px;
+}
+
+div#footer_links section#contact{
+padding-left: 0px;
+}
+
+div#footer_links section#social{
+padding-right: 0px;
+}
+
+}/*/mediaquery*/
+
+/*768px iPad+ size __________________________________________________________________________________________ */
+@media only screen and (min-width: 769px) {
+
+/*Logo re-positioning for iPad and above*/
+h1, h1 a {
+width: 233px;
+background-position: left center;
+}
+
+/*input size*/
+input[type="text"] {
+width: 296px;
+}
+
+/*textarea blog/contact form size*/
+textarea {
+width:637px;
+}
+
+/*subscribe input width*/
+input.subscribe {
+width: 240px;
+}
+
+ul.thumbs li img {
+border: 3px solid #EEEEEE;
+display: block;
+background-color: #FFFFFF;
+padding: 0;
+margin-right: 0;
+width:70px;
+height: auto;
+margin-bottom: 5px;
+}
+
+ul.iphone-thumbs li:hover, ul.thumbs li:hover{
+border-bottom: none;
+}
+
+}/*/mediaquery*/
+
+/*992px __________________________________________________________________________________________________________ */
+@media only screen and (min-width: 992px) {
+
+/*header*/
+header section nav{
+float: right;
+}
+
+/*responsive image at large size*/
+#largeImg {
+height: auto;
+width: auto;
+}
+
+ul.thumbs li {
+display: inline-block;
+margin-right: 12px;
+}
+
+#container footer section#recent-1{
+width: 100%;
+}
+
+}/*/mediaquery*/
+
+/*Print __________________________________________________________________________________________________________ */
+@media print {
+* { 
+background : transparent !important; 
+color : black !important; 
+text-shadow : none !important; 
+filter : none !important;
+-ms-filter : none !important; 
+} 
+
+a, 
+a:visited { 
+color : #444 !important; 
+text-decoration : underline; 
+}
+
+a[href]:after { 
+content : " (" attr(href) ")"; 
+}
+
+abbr[title]:after { 
+content : " (" attr(title) ")"; 
+}
+
+a[href^="javascript:"]:after, 
+a[href^="#"]:after { 
+content : ""; 
+}
+  
+pre, 
+blockquote { 
+border : 1px solid #999; 
+page-break-inside : avoid; 
+}
+
+thead { 
+display : table-header-group; 
+}
+
+tr, img { 
+page-break-inside : avoid; 
+}
+
+@page { 
+margin : .5cm; 
+}
+
+p, 
+h2, 
+h3 { 
+orphans : 3; 
+widows : 3; 
+}
+
+h2, 
+h3 { 
+page-break-after : avoid; 
+}
+
+}/*/mediaquery*/
+
+/* 
+Image Sources: 
+jenschapter3: http://www.flickr.com/photos/chapter3/
+	http://www.flickr.com/photos/chapter3/3940088884/ 
+	http://www.flickr.com/photos/chapter3/3939310951/ 
+	http://www.flickr.com/photos/chapter3/3940088348/
+	http://www.flickr.com/photos/chapter3/3940091776/
+	http://www.flickr.com/photos/chapter3/3940090786/
+	http://www.flickr.com/photos/chapter3/3940088610/
+*/

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <form method="post" action="/contact-us.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="RunwayMasterForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MWRkuIqX2wQGgGMmDProlTpH9s/p/YFyGMfmPvFD9p8Kol8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['RunwayMasterForm'];
+if (!theForm) {
+    theForm = document.RunwayMasterForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=TU6Bp64fP53WCJRZBv24dB-e7X07idcstPi5McR5bHqLmLQLA6a-JdGBQ6V9gGCcpbx7GmPnfpWcA5GE-RwMVxfoKRsyIAwFqTomsD_OGm41&amp;t=634485857400817031" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=FBw-pREWtSc1Iw9iuvUxOtHqZHvSf5x1mlDNm6IL5x0xOz_EzQngh2T4jJTvKmSJiB7AJW14cBHyvHwMLmA2iiTqr3WoOd4xg8UX6NsOfec1&amp;t=634485857400817031" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+     
+<head>
+    
+<!-- META -->
+<meta charset="utf-8">
+<meta name="author" content="Mark Boulton Design">
+<meta name="Copyright" content="Copyright &copy; 2011 Mark Boulton Design">
+<!-- SCALE FOR MOBILE DEVICES IF NEEDED -->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<title>Name of site</title>
+
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet">
+
+
+<!--[if ! lte IE 6]><!-->
+<link href="/css/screen.css" rel="stylesheet">
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" />
+<![endif]-->
+
+<!-- JAVASCRIPT -->
+<!--[if IE]>
+<script src="/scripts/html5.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+$(".thumbs li img, .iphone-thumbs li img").click(function(){
+   var largePath = $(this).attr("src");
+   $("#largeImg").attr({ src: largePath });
+});
+
+});
+
+$(function () {
+    $('#iphone_nav').change(function () {
+        window.location = $(this).val();
+    });
+});
+</script>
+
+<!-- Skin fonts -->
+<link id="swapfont" href="http://fonts.googleapis.com/css?family=PT%20Sans%20Narrow:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link id="swapcss" href="/css/PT%20Sans%20Narrow.css" rel="stylesheet">
+
+
+<!-- FAVICON -->
+<link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+
+  <header>
+  <section>
+    <h1>
+      <a href="/">WEGNER</a>
+    </h1>
+    <nav><ul><li><a href="/">
+              Home
+            </a></li><li><a href="/company-news/another-record-year.aspx">Company News</a></li><li><a href="/company-blog/company-blog-post.aspx">Company Blog</a></li><li><a href="/about.aspx">About</a></li><li><a href="/contact-us.aspx" class="active">Contact us</a></li></ul></nav><select id="iphone_nav"><option value="/">Home</option><option value="/company-news.aspx">Company News</option><option value="/company-blog/company-blog-post.aspx">Company Blog</option><option value="/about.aspx">About</option><option selected="selected" value="/contact-us.aspx">Contact us</option></select>    
+    <div class="clearfix"></div>
+  </section>
+</header>
+
+  
+
+  
+  <div id="content"> 
+  
+  <section id="container"> 
+  <h2>Contact us</h2> 
+  
+  
+  <section id="col_left_wide"> 
+    <article> 
+        <h3>Office address</h3>
+
+<ul>
+<li>Company Name</li>
+
+<li>918 East Test Rd. Test, WA 99206, USA</li>
+
+<li>Telephone: +0 123 456 789</li>
+
+<li>Email: email@example.com</li>
+</ul>
+
+<h3>Send us an email</h3>
+
+<p>This contact form sends email to the addresse configured on the
+macro itself, edit the page in umbraco to change the addresse</p>
+
+<p>Also ensure that your smtp email settings are correct, these are
+set in the <strong>web.config</strong> file located in the root of
+your website.</p>
+
+<div id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_valSum" class="error" style="display:none;">
+
+</div>
+
+<fieldset>
+<legend>Your details</legend>
+<p><label for="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_name" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_lb_name">Name</label><input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$cp_content$ctl02$Contact_3$tb_name" type="text" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_name" class="text" /></p>
+<p><label for="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_email" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_lb_email">Email</label><input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$cp_content$ctl02$Contact_3$tb_email" type="text" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_email" class="text" /></p>
+<p><label for="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_company" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_lb_company">Company</label><input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$cp_content$ctl02$Contact_3$tb_company" type="text" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_company" class="text" /></p>
+</fieldset>
+<fieldset>
+<legend>Message</legend>
+<p><label for="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_msg" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_Label1">Message</label> <textarea name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$cp_content$ctl02$Contact_3$tb_msg" rows="2" cols="20" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_msg" class="text">
+</textarea></p>
+<p><input type="submit" name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$cp_content$ctl02$Contact_3$bt_submit" value="Send email" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$ContentPlaceHolderDefault$cp_content$ctl02$Contact_3$bt_submit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_bt_submit" /> </p>
+</fieldset>
+
+<span id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0" style="display:none;"></span>
+<span id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1" style="display:none;"></span>
+<span id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2" style="display:none;"></span>
+
+<span id="ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0" style="display:none;"></span>
+
+    </article> 
+  </section> 
+ 
+  </section> 
+  <aside> 
+    
+  </aside> 
+  
+  <div class="clearfix"></div> 
+</section> 
+</div> 
+  
+  
+
+
+
+  
+
+<footer>
+<div id="footer_links">
+  <section id="contact"> 
+    
+    <h5>Contact Us</h5>
+    
+    <div id="" class="vcard">
+       <span class="org">Company Name</span>
+       <span class="adr">
+          <div class="street-address">918 East Test Rd.</div>
+          <span class="locality">Test</span>, 
+          <span class="postal-code">WA 99206,</span>
+          <span class="country-name">USA</span>
+      </span>
+      <span>Email: <a class="email" href="mailto:email@example.com">email@example.com</a></span>
+      <span>Tel: <span class="tel">+0 123 456 789</span></span>
+    </div>
+  </section>
+      
+  <section id="about">
+    <h5>Join our Newsletter</h5>
+    <p>To find out more about our products, pop your email address below</p>
+    <p>We promise we'll keep it to ourselves!</p>
+    <fieldset>
+      <label>Email:</label>
+      <input type="text" class="subscribe">
+      <input type="submit" value="Submit">
+    </fieldset>
+      
+  </section>
+  <section id="social">
+  <h5>Share/Social</h5>
+  <ul class="footernav">
+    <li role="twitter"><a href="#">Twitter</a></li>
+    <li role="facebook"><a href="#">facebook</a></li>
+    <li role="linkedin"><a href="#">Linkedin</a></li>
+    <li role="su"><a href="#">Stumpled upon</a></li>
+  </ul>
+  </section>
+  <div class="clearfix"></div>
+  <p id="credit">Powered by <a href="http://www.umbraco.com">Umbraco</a> | Skin created by <a href="http://www.markboultondesign.com/">Mark Boulton Design</a></p>
+</div>
+
+</footer>
+ 
+
+</body>
+  
+  
+     <head id="ContentPlaceHolderDefault_head"><title>
+
+</title></head>
+    
+  
+ 
+    
+
+   
+
+
+  
+
+      
+      
+      
+            
+    
+           
+    
+      
+      
+     
+      
+  
+
+ 
+   
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_valSum"));
+var Page_Validators =  new Array(document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0"), document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1"), document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2"), document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0 = document.all ? document.all["ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0"] : document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0");
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0.controltovalidate = "ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_name";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0.errormessage = "Name is mandatory";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0.display = "None";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator0.initialvalue = "";
+var ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1 = document.all ? document.all["ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1"] : document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1");
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1.controltovalidate = "ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_email";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1.errormessage = "Email is mandatory";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1.display = "None";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator1.initialvalue = "";
+var ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2 = document.all ? document.all["ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2"] : document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2");
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2.controltovalidate = "ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_msg";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2.errormessage = "Message is mandatory";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2.display = "None";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RequiredFieldValidator2.initialvalue = "";
+var ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0 = document.all ? document.all["ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0"] : document.getElementById("ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0");
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0.controltovalidate = "ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_tb_email";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0.errormessage = "Email is not valid";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0.display = "None";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ContentPlaceHolderDefault_cp_content_ctl02_Contact_3_RegularExpressionValidator0.validationexpression = "^(?i:(?<local_part>[a-z0-9!#$%^&*{}\'`+=-_|/?]+(?:\\.[a-z0-9!#$%^&*{}\'`+=-_|/?]+)*)@(?<labels>[a-z0-9]+\\z?.*[a-z0-9-_]+)*(?<tld>\\.[a-z0-9]{2,}))$";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form> 
+</html>
+  

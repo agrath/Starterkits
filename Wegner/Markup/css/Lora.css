@@ -1,0 +1,25 @@
+
+body { 
+width : 100%;
+color: #333333;
+font-weight: normal;
+background: rgba(233, 156, 34, 0.3);
+
+/*google fonts*/
+font : 100%/1.4 'Lora', arial, sans-serif; /* PT sans */
+
+}
+
+header{
+background: rgba(233, 156, 34, 1);
+width: auto;
+}
+
+#content {
+background-color: white;
+border-top: 8px solid rgba(233, 156, 34, 0.3);
+}
+
+#container section a, aside a{
+color: rgba(233, 156, 34, 1);
+}

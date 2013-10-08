@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html>  
+<head>
+    
+<!-- META -->
+<meta charset="utf-8">
+<meta name="author" content="Mark Boulton Design">
+<meta name="Copyright" content="Copyright &copy; 2011 Mark Boulton Design">
+<!-- SCALE FOR MOBILE DEVICES IF NEEDED -->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<title>Name of site</title>
+
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet">
+
+
+<!--[if ! lte IE 6]><!-->
+<link href="/css/screen.css" rel="stylesheet">
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" />
+<![endif]-->
+
+<!-- JAVASCRIPT -->
+<!--[if IE]>
+<script src="/scripts/html5.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+$(".thumbs li img, .iphone-thumbs li img").click(function(){
+   var largePath = $(this).attr("src");
+   $("#largeImg").attr({ src: largePath });
+});
+
+});
+
+$(function () {
+    $('#iphone_nav').change(function () {
+        window.location = $(this).val();
+    });
+});
+</script>
+
+<!-- Skin fonts -->
+<link id="swapfont" href="http://fonts.googleapis.com/css?family=PT%20Sans%20Narrow:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link id="swapcss" href="/css/PT%20Sans%20Narrow.css" rel="stylesheet">
+
+
+<!-- FAVICON -->
+<link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+
+  <header>
+  <section>
+    <h1>
+      <a href="/">WEGNER</a>
+    </h1>
+    <nav><ul><li><a href="/" class="active">
+
+              Home
+
+            </a></li><li><a href="/company-news/another-record-year.aspx">Company News</a></li><li><a href="/company-blog/company-blog-post.aspx">Company Blog</a></li><li><a href="/about.aspx">About</a></li><li><a href="/contact-us.aspx">Contact us</a></li></ul></nav><select id="iphone_nav"><option value="/">Home</option><option value="/company-news.aspx">Company News</option><option value="/company-blog/company-blog-post.aspx">Company Blog</option><option value="/about.aspx">About</option><option value="/contact-us.aspx">Contact us</option></select>    
+    <div class="clearfix"></div>
+  </section>
+</header>
+
+  
+
+    <div id="content">
+  <section id="container">
+
+    <section id="col_left">
+      <figure>
+        <img id="largeImg" src="/images/img1-lg.jpg"/>
+      </figure>
+    </section>
+
+    <section id="col_right">
+      <ul class="iphone-thumbs">
+        <li><img src="/images/img1-lg.jpg"/></li>
+        <li><img src="/images/img2-lg.jpg"/></li>
+        <li><img src="/images/img3-lg.jpg"/></li>
+        <li><img src="/images/img4-lg.jpg"/></li>
+      </ul>
+      <h2>Description</h2>
+      <p>The Simple Starter Kit gives you a bare-bones website that
+
+introduces you to a set of well-defined conventions for building an
+
+Umbraco website.</p>
+
+
+
+<p>The Simple website is very basic in form and provided without
+
+any design or functionality - unless you add a Skin, of course. By
+
+installing the Simple Starter Kit, you'll begin with a minimal site
+
+built on best practices. You'll also enjoy the benefits of speaking
+
+the same "language" as the rest of the Umbraco community by using
+
+common properties and naming conventions.</p>
+
+
+
+<p>Now that you know what the Simple site is, it is time to get
+
+started using Umbraco.</p>
+      <ul class="thumbs">
+        <li><img src="/images/img1-lg.jpg"/></li>
+        <li><img src="/images/img2-lg.jpg"/></li>
+        <li><img src="/images/img3-lg.jpg"/></li>
+        <li><img src="/images/img4-lg.jpg"/></li>
+      </ul>
+    </section>
+    <div class="clearfix"></div>
+    <footer>
+      <section id="news">
+        <h3>Company news</h3><article><h4><a href="/company-news/another-record-year.aspx">Another record year</a></h4><a href="/company-news/another-record-year.aspx"><img src="/images/news-img.jpg" /></a><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id enim vel metus dignissim fermen...</p></article>
+      </section>
+    
+      <section id="blog">
+        <h3>Blog</h3><ul><li><h4><a href="/company-blog/company-blog-post.aspx">Company blog post</a></h4><time datetime="07/09/2010">07/09/2010</time>
+
+Hi there! , welcome to your new Umbraco powered
+
+blog. Before you start posting away, there's a...</li></ul>
+        <a href="/company-blog.aspx">See more blog posts</a>
+      </section>
+    
+      <section id="about">  
+        <h3>About</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo lectus, iaculis a laoreet in, lobortis in ligula. Proin in diam elit. Nulla facilisi. </p>
+        <img src="/images/studio.jpg" />
+      </section>
+     </footer>
+      <div class="clearfix"></div>
+      </section>
+    </div>
+
+  
+
+<footer>
+<div id="footer_links">
+  <section id="contact"> 
+    
+    <h5>Contact Us</h5>
+    
+    <div id="" class="vcard">
+       <span class="org">Company Name</span>
+       <span class="adr">
+          <div class="street-address">918 East Test Rd.</div>
+          <span class="locality">Test</span>, 
+          <span class="postal-code">WA 99206,</span>
+          <span class="country-name">USA</span>
+      </span>
+      <span>Email: <a class="email" href="mailto:email@example.com">email@example.com</a></span>
+      <span>Tel: <span class="tel">+0 123 456 789</span></span>
+    </div>
+  </section>
+      
+  <section id="about">
+    <h5>Join our Newsletter</h5>
+    <p>To find out more about our products, pop your email address below</p>
+    <p>We promise we'll keep it to ourselves!</p>
+    <fieldset>
+      <label>Email:</label>
+      <input type="text" class="subscribe">
+      <input type="submit" value="Submit">
+    </fieldset>
+      
+  </section>
+  <section id="social">
+  <h5>Share/Social</h5>
+  <ul class="footernav">
+    <li role="twitter"><a href="#">Twitter</a></li>
+    <li role="facebook"><a href="#">facebook</a></li>
+    <li role="linkedin"><a href="#">Linkedin</a></li>
+    <li role="su"><a href="#">Stumpled upon</a></li>
+  </ul>
+  </section>
+  <div class="clearfix"></div>
+  <p id="credit">Powered by <a href="http://www.umbraco.com">Umbraco</a> | Skin created by <a href="http://www.markboultondesign.com/">Mark Boulton Design</a></p>
+</div>
+
+</footer>
+ 
+
+</body>
+</html>
+  

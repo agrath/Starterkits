@@ -1,0 +1,29 @@
+
+body { 
+width : 100%;
+color: #333333;
+font-weight: normal;
+background: rgba(144, 144, 152, 0.3);
+
+/*google fonts*/
+font : 100%/1.4 'PT Sans Narrow', arial, sans-serif; /* PT sans */
+
+}
+
+header{
+background: rgba(144, 144, 152, 1);
+width: auto;
+}
+
+#content {
+background-color: white;
+border-top: 8px solid rgba(144, 144, 152, 0.3);
+}
+
+#container section a, aside a{
+color: rgba(144, 144, 152, 1);
+}
+
+header section nav ul li {
+font-size: 15px;
+}

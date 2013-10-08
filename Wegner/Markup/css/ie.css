@@ -1,0 +1,208 @@
+body {
+background-color: #a8a8b4;
+}
+
+header {
+background-color: #909098;
+width: auto;
+}
+
+#content {
+background-color: white;
+border-top: 8px solid #a8a8b4;
+}
+
+/*nav ____________________________________________________________________________________________________________ */
+nav{
+display: block;
+}
+
+/*masthead _______________________________________________________________________________________________________ */
+header section nav{
+margin-left: 15%;
+}
+
+header section nav ul{
+margin: 20px 0;
+}
+
+header section nav ul li{
+display: inline;
+font-size: 14px;
+}
+
+header section nav ul li a{
+-moz-border-radius: 15px; 
+-webkit-border-radius: 15px; 
+border-radius: 15px;
+
+-moz-transition: background-color 0.3s ease-out;  
+-o-transition: background-color 0.3s ease-out; 
+-webkit-transition: background-color 0.3s ease-out; 
+-ms-transition: background-color 0.3s ease-out; 
+transition: background-color 0.3s ease-out;
+          
+color: #333333;
+padding: 5px 15px;
+}
+
+header section nav ul li a.active{
+background-color: #a8a8b4;
+color: white;
+}
+
+header section nav ul li a:hover{
+background-color: #a8a8b4;
+}
+
+/*footer _________________________________________________________________________________________________________ */
+#container footer section{
+width: 29%;
+float: left;
+padding: 0 20px;
+}
+
+#container footer section#news,
+footer section#contact,
+#container footer section#recent-1{
+padding-left: 0;
+}
+
+#container footer section#about,
+footer section#social,
+#container footer section#recent-3{
+padding-right: 0;
+}
+
+/*large image scaling*/
+#largeImg {
+background-color: #FFFFFF;
+float: left;
+margin: 33px 20px 33px 0;
+height: auto;
+width: 54%;
+}
+
+#container section#col_right {
+margin-top: -100px;
+}
+
+/*large image thumbs*/
+ul.thumbs li {
+display: inline;
+float: left;
+margin-right: 30px;
+}
+
+ul.thumbs li img {
+display: block;
+background-color: #FFFFFF;
+border: 3px solid #EEEEEE;
+padding: 0;
+width:46px;
+height: auto;
+margin-right: 0;
+margin-bottom: 5px;
+}
+
+/*iphone images hidden*/
+ul.iphone-thumbs img {
+display: none;
+}
+
+/*iphone nav hidden*/
+select#iphone_nav{
+display: none;
+}
+
+/*forms __________________________________________________________________________________________________________ */
+input[type="text"] {
+width: 211px;
+}
+
+textarea {
+width: 470px;
+}
+
+input.subscribe {
+width: 168px;
+}
+
+/* blog __________________________________________________________________________________________________________*/
+aside{
+float: left;
+width:20%;
+margin-top: 10px;
+}
+
+/*wide left column*/
+#container section#col_left_wide{
+width: 70%;
+float: left;
+margin-right: 20px;
+margin-top: 10px;
+}
+
+/*footer___________________________________________________________________________________________________________*/
+div#footer_links section{
+width: 29%;
+}
+
+div#footer_links section{
+padding: 0 20px;
+}
+
+div#footer_links section#contact{
+padding-left: 0px;
+}
+
+div#footer_links section#social{
+padding-right: 0px;
+}
+
+/*Logo re-positioning for iPad and above*/
+h1, h1 a {
+width: 233px;
+background-position: left center;
+}
+
+/*input size*/
+input[type="text"] {
+width: 296px;
+}
+
+/*textarea blog/contact form size*/
+textarea {
+width:637px;
+}
+
+/*subscribe input width*/
+input.subscribe {
+width: 240px;
+}
+
+ul.thumbs li img {
+border: 3px solid #EEEEEE;
+display: block;
+background-color: #FFFFFF;
+padding: 0;
+margin-right: 0;
+width:70px;
+height: auto;
+margin-bottom: 5px;
+}
+
+ul.iphone-thumbs li:hover, ul.thumbs li:hover{
+border-bottom: none;
+}
+
+/*header*/
+header section nav{
+float: right;
+}
+
+/*responsive image at large size*/
+#largeImg {
+height: auto;
+width: auto;
+}
