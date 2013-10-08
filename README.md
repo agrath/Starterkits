@@ -1,4 +1,4 @@
 Starterkits
 ===========
 
-Starterkits for Umbraco 4
+Starterkits for Umbraco
