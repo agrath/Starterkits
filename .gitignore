@@ -43,3 +43,12 @@ _ReSharper.*
 
 #Nuget
 packages/
+
+#Umbraco
+dummy.txt
+[Ll]ogs/
+justDelete*
+Overflow/Overflow/App_Data/TEMP/
+Txt/Txt/App_Data/TEMP/
+Overflow/Overflow/media/created-packages/
+Txt/Txt/media/created-packages/

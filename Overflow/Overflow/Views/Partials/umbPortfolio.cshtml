@@ -1,0 +1,38 @@
+@inherits UmbracoTemplatePage
+@{
+    // A media folder is selected on the page and it is saved as a media Id.
+    // We can get the actual folder like so:
+    var portfolioFolder = Umbraco.Media(CurrentPage.PortfolioMediaFolder);
+}
+
+<!-- Portfolio -->
+<article class="container box style2">
+    <header>
+        <h2>@CurrentPage.PortfolioTitle</h2>
+        @*
+            Since the PortfolioText property is simple text, we need to replace linebreaks with a
+            "<br />" and since Razor tries to help you be safe, it doesn't allow direct output of
+            the HTML here, so that's where we need to force it by using Html.Raw.
+        *@
+        <p>@Html.Raw(Umbraco.ReplaceLineBreaksForHtml(CurrentPage.PortfolioText))</p>
+    </header>
+    <div class="inner gallery">
+        @*
+            We have x number of children under the portFolioFolder, which we're going
+            to loop through.
+            The template works beautifully by grouping 4 images together, then adding a
+            <div class="row flush"> and then grouping another 4 images together. We can
+            replicate that behaviour by taking all of the images in the portfolio folder
+            and using InGroupsOf(4) to show them 4 by 4.
+        *@
+        @foreach (var mediaGroup in portfolioFolder.Children.InGroupsOf(4))
+        {
+            <div class="row flush">
+                @foreach (var item in mediaGroup)
+                {
+                    <div class="3u"><a href="@item.Url" class="image full crop"><img src="@item.Url" alt="@item.Name" title="@item.Name" /></a></div>
+                }
+            </div>
+        }
+    </div>
+</article>
