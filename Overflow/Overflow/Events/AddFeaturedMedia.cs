@@ -14,11 +14,6 @@ namespace Overflow.Events
             
             if (Directory.Exists(featuresMediaPath) == false || Directory.GetFiles(featuresMediaPath).Any() == false) 
                 return;
-
-            var mediaService = UmbracoContext.Current.Application.Services.MediaService;
-
-            var featuresFolder = mediaService.CreateMedia("UmbFeatures", -1, Constants.Conventions.MediaTypes.Folder);
-            mediaService.Save(featuresFolder);
                 
             var featuresContentType = UmbracoContext.Current.Application.Services.ContentTypeService.GetAllContentTypes().Single(x => x.Alias == "umbFeature");
             var contentService = UmbracoContext.Current.Application.Services.ContentService;
