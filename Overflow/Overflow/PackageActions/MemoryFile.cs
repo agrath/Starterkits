@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Web;
 
-namespace Overflow.Events
+namespace Overflow.PackageActions
 {
     internal class MemoryFile : HttpPostedFileBase
     {

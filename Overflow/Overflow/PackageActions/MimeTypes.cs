@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Overflow.Events
+namespace Overflow.PackageActions
 {
     //From: http://stackoverflow.com/a/14003980/5018
     public class MimeTypes

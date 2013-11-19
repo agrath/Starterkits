@@ -1,11 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Xml;
-using Overflow.Events;
 using Umbraco.Core;
 using Umbraco.Core.Logging;
 using umbraco.interfaces;
+using Umbraco.Web;
 
 namespace Overflow.PackageActions
 {
@@ -13,14 +14,10 @@ namespace Overflow.PackageActions
     {
         public bool Execute(string packageName, XmlNode xmlData)
         {
-
             try
             {
-                TouchWebConfig();
-
-                //AddPortfolioCropperToImageMediaType.Execute();
-                AddFeaturedMedia.Execute();
-                AddPortfolioMedia.Execute();
+                AddFeaturedMedia();
+                AddPortfolioMedia();
 
                 var contentService = ApplicationContext.Current.Services.ContentService;
                 var homeNode = contentService.GetRootContent().First();
@@ -36,10 +33,71 @@ namespace Overflow.PackageActions
             }
         }
 
-        public void TouchWebConfig()
+        private static void AddFeaturedMedia()
         {
-            var sWebConfigPath = HttpContext.Current.Server.MapPath("~/Web.Config");
-            System.IO.File.SetLastWriteTimeUtc(sWebConfigPath, DateTime.UtcNow);
+            var featuresMediaPath = HttpContext.Current.Server.MapPath("~/media/umbFeatures");
+
+            if (Directory.Exists(featuresMediaPath) == false || Directory.GetFiles(featuresMediaPath).Any() == false)
+                return;
+
+            var featuresContentType = UmbracoContext.Current.Application.Services.ContentTypeService.GetAllContentTypes().Single(x => x.Alias == "umbFeature");
+            var contentService = UmbracoContext.Current.Application.Services.ContentService;
+            var features = contentService.GetContentOfContentType(featuresContentType.Id).ToList();
+
+            for (var i = 0; i < Directory.GetFiles(featuresMediaPath).Length; i++)
+            {
+                var file = Directory.GetFiles(featuresMediaPath)[i];
+                var relativePath = "/" + file.Replace(HttpContext.Current.Request.ServerVariables["APPL_PHYSICAL_PATH"], string.Empty).Replace(@"\", "/");
+
+                var feature = features.Skip(i).Take(1).SingleOrDefault();
+                if (feature == null)
+                    continue;
+
+                feature.SetValue("image", relativePath);
+                contentService.Save(feature);
+            }
+        }
+
+        private static void AddPortfolioMedia()
+        {
+            var portfolioMediaPath = HttpContext.Current.Server.MapPath("~/media/umbPortFolio");
+
+            if (Directory.Exists(portfolioMediaPath) == false || Directory.GetFiles(portfolioMediaPath).Any() == false)
+                return;
+
+            var mediaService = UmbracoContext.Current.Application.Services.MediaService;
+
+            var portfolioFolder = mediaService.CreateMedia("UmbPortfolio", -1, Constants.Conventions.MediaTypes.Folder);
+            mediaService.Save(portfolioFolder);
+
+            foreach (var file in Directory.GetFiles(portfolioMediaPath))
+            {
+                var fileName = file.Substring(file.LastIndexOf(@"\", StringComparison.Ordinal) + 1);
+                var fileExtension = fileName.Substring(fileName.LastIndexOf(".", StringComparison.Ordinal) + 1);
+
+                var media = mediaService.CreateMedia(fileName.Replace("." + fileExtension, ""), portfolioFolder, Constants.Conventions.MediaTypes.Image);
+
+                var uploadFile = new MemoryStream();
+
+                using (var fileStream = File.OpenRead(file))
+                    fileStream.CopyTo(uploadFile);
+
+                var memoryFile = new MemoryFile(uploadFile, MimeTypes.GetMimeType(fileExtension), file);
+
+                media.SetValue(Constants.Conventions.Media.File, memoryFile);
+                mediaService.Save(media);
+            }
+
+            var portfolioContentType = UmbracoContext.Current.Application.Services.ContentTypeService.GetAllContentTypes().Single(x => x.Alias == "umbPortfolio");
+
+            var contentService = UmbracoContext.Current.Application.Services.ContentService;
+
+            var portfolios = contentService.GetContentOfContentType(portfolioContentType.Id);
+            foreach (var portfolio in portfolios)
+            {
+                portfolio.SetValue("portfolioMediaFolder", portfolioFolder.Id);
+                contentService.Save(portfolio);
+            }
         }
 
         public string Alias()

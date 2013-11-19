@@ -219,12 +219,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\UmbContactController.cs" />
-    <Compile Include="Events\AddFeaturedMedia.cs" />
-    <Compile Include="Events\AddPortfolioMedia.cs" />
-    <Compile Include="Events\MemoryFile.cs">
+    <Compile Include="PackageActions\MemoryFile.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Events\MimeTypes.cs">
+    <Compile Include="PackageActions\MimeTypes.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -323,6 +321,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Events\" />
     <Folder Include="macroScripts\" />
     <Folder Include="masterpages\" />
     <Folder Include="media\" />
