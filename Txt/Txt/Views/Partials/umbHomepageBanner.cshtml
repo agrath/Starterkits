@@ -7,7 +7,9 @@
         <section id="banner">
             <h2>@Umbraco.Field("bannerHeader")</h2>
             <span class="byline">@Umbraco.Field("bannerSubheader")</span>
-            <a href="@Umbraco.Content(CurrentPage.BannerLink).Url" class="button">@Umbraco.Field("bannerLinkText")</a>
+            @if(CurrentPage.BannerLink.HasValue()){
+            	<a href="@Umbraco.Content(CurrentPage.BannerLink).Url" class="button">@Umbraco.Field("bannerLinkText")</a>
+            }
         </section>
     </div>
     <!-- /Banner -->
