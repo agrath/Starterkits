@@ -19,7 +19,7 @@ namespace Overflow.Controllers
             // The model defines validations for empty or invalid email addresses
             // See the UmbContactMail class below 
             if (ModelState.IsValid == false)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState.First().Value.Errors.First().ErrorMessage);
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, HttpContext.Current.Server.HtmlEncode(ModelState.First().Value.Errors.First().ErrorMessage));
 
             // In order to allow editors to configure the email address where contact 
             // mails will be sent, we require that to be set in a property with the
